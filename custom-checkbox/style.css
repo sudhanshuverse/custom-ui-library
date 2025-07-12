@@ -1,6 +1,7 @@
 :root {
     --box-height: 50px; /* Height of the custom checkbox */
     --box-width: 50px;  /* Width of the custom checkbox */
+    --main-color: #ff9114;  /* Color of the custom checkbox */
 }
 
 * {
@@ -49,13 +50,13 @@ body {
 
 /* Hover effect */
 .checkbox-container label:hover {
-    border-color: #5128c6;
+    border-color: var(--main-color);
 }
 
 /* Checked styles */
 .checkbox:checked + label {
     border-color: #CFBFFF;
-    background-color: #5128c6;
+    background-color: var(--main-color);
 }
 
 /* Focus or active states */
