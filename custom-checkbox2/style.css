@@ -1,0 +1,96 @@
+:root {
+    /* Custom properties to easily adjust the checkbox */
+    --checkbox-height: 80px;
+    --checkbox-width: 80px;
+    --checkbox-color: #5128c6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* Center the checkbox in the viewport */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+/* Hide the native checkbox */
+.checkbox {
+    display: none;
+}
+
+.checkbox + label {
+    width: var(--checkbox-width);
+    height: var(--checkbox-height);
+    border: 2px solid #c2c2c2;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+
+    /* Flex center the inner content (inner box) */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Smooth transition for hover effect */
+    transition: border-color 0.3s ease;
+    position: relative;
+}
+
+/* On hover, change the border color */
+.checkbox + label:hover {
+    border-color: var(--checkbox-color);
+}
+
+/* Inner box (the fill that appears when checked) */
+.checkbox + label .inner-box {
+    width: 85%;
+    height: 85%;
+    background-color: var(--checkbox-color);
+    border-radius: 2px;
+
+    /* Hidden by default */
+    display: none;
+}
+
+/* When checkbox is checked, show the inner box */
+.checkbox:checked + label .inner-box {
+    display: block;
+}
+
+
+
+
+.checkbox + label {
+    width: var(--checkbox-width);
+    height: var(--checkbox-height);
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Reserve space for border using box-shadow */
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px #c2c2c2;
+
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+}
+
+.checkbox + label:hover {
+    box-shadow: 0 0 0 2px var(--checkbox-color);
+}
+
+.checkbox:focus + label,
+label:active {
+    outline: none;
+    box-shadow: 0 0 0 2px #CFBFFF;
+}
