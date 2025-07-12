@@ -1,0 +1,81 @@
+:root {
+    --switch-width: 120px;     /* Easily change these values */
+    --switch-height: 60px;
+    --circle-size: calc(var(--switch-height) - 6px);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.switch-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Hide the checkbox */
+.switch {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Switch track */
+.switch + label {
+    width: var(--switch-width);
+    height: var(--switch-height);
+    background-color: #ccc;
+    border-radius: var(--switch-height);
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border: 1px solid #ccc;
+}
+
+/* Circle */
+.switch-circle {
+    width: var(--circle-size);
+    height: var(--circle-size);
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: left 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+.switch + label:hover {
+    border-color: #5128c6;
+}
+
+/* Checked state */
+.switch:checked + label {
+    background-color: #5128c6;
+    border-color: #CFBFFF;
+}
+
+/* Move the circle when checked */
+.switch:checked + label .switch-circle {
+    left: calc(100% - var(--circle-size) - 3px);
+}
+
+/* Active press effect */
+.switch:active + label .switch-circle {
+    transform: translateY(-50%) scale(0.92);
+}
