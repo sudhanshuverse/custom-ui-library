@@ -1,0 +1,62 @@
+:root {
+    --hamburger-size: 60px;
+    --top: auto;
+    --right: auto;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    position: absolute;
+    top: var(--top);
+    right: var(--right);
+}
+
+.hamburger {
+    width: var(--hamburger-size);
+    height: var(--hamburger-size);
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+}
+
+.hamburger span {
+    width: 70%;
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.hamburger-top {
+    transform: translateY(-10px);
+}
+
+.hamburger-middle {
+    transform: translateY(0);
+}
+
+.hamburger-bottom {
+    transform: translateY(10px);
+}
+
+.hamburger.open .hamburger-top {
+    transform: rotate(45deg);
+}
+
+.hamburger.open .hamburger-middle {
+    opacity: 0;
+}
+
+.hamburger.open .hamburger-bottom {
+    transform: rotate(-45deg);
+}
