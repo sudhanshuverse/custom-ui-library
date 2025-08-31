@@ -5,6 +5,10 @@ Each component is self-contained and easy to integrate into your projects.
 
 ---
 
+## Live Preview
+Check out the live demo of the quiz app:
+https://sudhanshuverse.github.io/quiz-app/
+
 ## 📂 Components
 
 | Component | Description |
