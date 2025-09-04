@@ -22,8 +22,3 @@ https://sudhanshuverse.github.io/custom-ui-library/
 
 ---
 
-## 🚀 Getting Started
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/custom-ui-library.git
