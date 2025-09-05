@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #222;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.slider {
+    position: relative;
+    max-width: 1700px;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    max-width: 30%;
+    background: #333;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.slide h2 {
+    margin: 0;
+    font-size: 2em;
+    padding: 100px;
+}
+
+.slide p {
+    margin: 10px 0 0;
+    font-size: 16px;
+}
+
+/* Center slide */
+.slide.center {
+    z-index: 3;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Left and Right slides */
+.slide.left {
+    z-index: 2;
+    transform: translate(-160%, -50%) scale(0.9);
+    opacity: 0.8;
+}
+
+.slide.right {
+    z-index: 2;
+    transform: translate(60%, -50%) scale(0.9);
+    opacity: 0.8;
+}
+
+/* Off-screen slides */
+.slide.leave-left {
+    transform: translate(-300%, -50%) scale(0.7);
+    opacity: 0;
+    z-index: 1;
+}
+
+.slide.leave-right {
+    transform: translate(200%, -50%) scale(0.7);
+    opacity: 0;
+    z-index: 1;
+}
+
+/* Entering slides (used initially) */
+.slide.enter-left {
+    transform: translate(-160%, -50%) scale(0.9);
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.slide.enter-right {
+    transform: translate(60%, -50%) scale(0.9);
+    opacity: 0.8;
+    z-index: 2;
+}
+
+
+
+/* Responsive: Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .slide {
+        max-width: 30%;
+    }
+
+    .slide h2 {
+        font-size: 1.8em;
+    }
+
+    .slide p {
+        font-size: 14px;
+    }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 768px) {
+    .slide {
+        max-width: 90%;
+    }
+
+    /* Hide left and right slides on mobile */
+    .slide.left,
+    .slide.right {
+        /* display: none; */
+    }
+
+    .slide.center {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .slide h2 {
+        font-size: 1.5em;
+    }
+
+    .slide p {
+        font-size: 12px;
+    }
+}
