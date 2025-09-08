@@ -13,4 +13,4 @@ A simple responsive webpage to display awards and certificates in a smooth horiz
 
 
 ## Live Preview
-https://sudhanshuverse.github.io/custom-ui-library/shiny-cta-button/index.html
+https://sudhanshuverse.github.io/custom-ui-library/infinte-scroll/index.html
