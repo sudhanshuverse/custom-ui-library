@@ -15,7 +15,7 @@ A smooth and modern scroll-reveal effect built with **HTML & CSS**. Text fades i
 ---
 
 ## 🚀 Demo  
-
 ![Scroll Animation Preview](./assets/preview.gif)  
 
----
+## Live Preview
+https://sudhanshuverse.github.io/custom-ui-library/scroll-text-animation/index.html
