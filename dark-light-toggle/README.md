@@ -2,6 +2,9 @@
 
 A sleek, modern, and responsive custom switch button built with HTML and CSS. This UI component is ideal for toggling between Light and Dark themes in a stylish way.
 
+## Live Preview
+https://sudhanshuverse.github.io/custom-ui-library/dark-light-toggle/index.html
+
 
 ## ✨ Features
 
@@ -18,3 +21,4 @@ A sleek, modern, and responsive custom switch button built with HTML and CSS. Th
 ![Switch Toggle Preview](screenshot.gif)
 
 ---
+
