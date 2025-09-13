@@ -25,4 +25,4 @@ https://sudhanshuverse.github.io/custom-ui-library/
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/custom-ui-library.git
+   git clone https://github.com/sudhanshuverse/custom-ui-library.git
