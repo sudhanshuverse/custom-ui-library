@@ -6,7 +6,7 @@ Each component is self-contained and easy to integrate into your projects.
 ---
 
 ## 🔗 Live Preview
-👉 [Click Here](https://sudhanshuverse.github.io/custom-ui-library/)
+[https://sudhanshuverse.github.io/custom-ui-library/](https://sudhanshuverse.github.io/custom-ui-library/)
 
 ---
 
