@@ -22,6 +22,7 @@ Each component is self-contained and easy to integrate into your projects.
 | 06 | [Infinite Card Scroll](https://sudhanshuverse.github.io/custom-ui-library/06-infinite-card-scroll/index.html) | A smooth horizontal card scrolling effect. |
 | 07 | [Scroll Text Animation](https://sudhanshuverse.github.io/custom-ui-library/07-scroll-text-animation/index.html) | Animate text while scrolling for engaging UI experiences. |
 | 08 | [Shiny CTA Button](https://sudhanshuverse.github.io/custom-ui-library/08-shiny-cta-button/index.html) | An eye-catching call-to-action button with a shiny effect. |
+| 09 | [Scroll Based Animation](https://sudhanshuverse.github.io/custom-ui-library/09-scroll-based-animation/index.html) | Scroll based animation |
 
 
 ---
