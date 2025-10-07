@@ -23,6 +23,8 @@ Each component is self-contained and easy to integrate into your projects.
 | 07 | [Scroll Text Animation](https://sudhanshuverse.github.io/custom-ui-library/07-scroll-text-animation/index.html) | Animate text while scrolling for engaging UI experiences. |
 | 08 | [Shiny CTA Button](https://sudhanshuverse.github.io/custom-ui-library/08-shiny-cta-button/index.html) | An eye-catching call-to-action button with a shiny effect. |
 | 09 | [Scroll Based Animation](https://sudhanshuverse.github.io/custom-ui-library/09-scroll-based-animation/index.html) | Scroll based animation |
+| 09 | [Image Slider](https://sudhanshuverse.github.io/custom-ui-library/10/slider/index.html) | Image Slider  |
+| 11 | [Glow Hover Card Effect](https://sudhanshuverse.github.io/custom-ui-library/11/glow-hover-card-effect) | Card glow on hover |
 
 
 ---
