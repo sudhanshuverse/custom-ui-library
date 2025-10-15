@@ -1,4 +1,4 @@
-# 🎨 Custom UI Library
+pi# 🎨 Custom UI Library
 
 A collection of **beautiful, reusable, and lightweight UI components** built with **HTML, CSS, and JavaScript**.  
 Each component is self-contained and easy to integrate into your projects.
@@ -26,7 +26,6 @@ Each component is self-contained and easy to integrate into your projects.
 | 09 | [Image Slider](https://sudhanshuverse.github.io/custom-ui-library/10/slider/index.html) | Image Slider  |
 | 11 | [Glow Hover Card Effect](https://sudhanshuverse.github.io/custom-ui-library/11/glow-hover-card-effect) | Card glow on hover |
 
-
 ---
 
 ## 🚀 Getting Started
@@ -34,3 +33,4 @@ Each component is self-contained and easy to integrate into your projects.
 1. Clone this repository:
    ```bash
    git clone https://github.com/sudhanshuverse/custom-ui-library.git
+---
