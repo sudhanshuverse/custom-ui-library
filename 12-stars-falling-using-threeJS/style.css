@@ -1,0 +1,25 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body setup for fullscreen black background */
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Canvas styling for Three.js renderer */
+canvas {
+  position: fixed;  /* Ensures canvas stays in place */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;   /* Removes default inline spacing */
+}
