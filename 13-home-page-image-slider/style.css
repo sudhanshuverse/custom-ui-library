@@ -1,0 +1,332 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body,
+    html {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        font-family: 'Poppins', sans-serif;
+        background: #000;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ========== SLIDER BASE ========== */
+    .slider {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .slides {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transform: translateX(100%);
+        will-change: transform, opacity;
+        transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.6s ease-in-out;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        z-index: 0;
+    }
+
+    .slide.active {
+        opacity: 1;
+        transform: translateX(0);
+        z-index: 2;
+    }
+
+    .slide.exiting {
+        z-index: 1;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(70%);
+        backface-visibility: hidden;
+        transform: translateZ(0);
+    }
+
+    /* ========== CAPTION BOX ========== */
+    .slide-content {
+        position: absolute;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+        max-width: 900px;
+        z-index: 10;
+        text-align: left;
+    }
+
+    .slide-content .caption-box {
+        background: rgba(0, 0, 0, 0.7);
+        border-left: 6px solid #E41937;
+        padding: 20px 30px;
+        border-radius: 10px;
+        backdrop-filter: blur(2px);
+        opacity: 0;
+        transform: translateX(120%) scale(0.95);
+        animation: boxSlideIn 1.4s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .slide-content .caption-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(120deg,
+                rgba(255, 255, 255, 0.2),
+                rgba(255, 255, 255, 0));
+        transform: skewX(-25deg);
+        animation: boxShine 6s infinite linear;
+    }
+
+    .caption-box h2 {
+        font-size: 2.3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #ff6551 0%, #ffb4a4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 1px;
+        opacity: 0;
+        animation: textFadeIn 1.1s ease forwards;
+        animation-delay: 1.2s;
+    }
+
+    .caption-box h3 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-top: 8px;
+        background: linear-gradient(50deg, #00f7ff, #003cff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+        animation: textSlideUp 1.3s ease forwards;
+        animation-delay: 1.6s;
+    }
+
+    @keyframes boxSlideIn {
+        0% {
+            opacity: 0;
+            transform: translateX(120%) scale(0.95);
+            filter: blur(4px);
+        }
+
+        60% {
+            opacity: 1;
+            transform: translateX(-3%) scale(1.02);
+            filter: blur(0);
+        }
+
+        100% {
+            transform: translateX(0%) scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes boxShine {
+        0% {
+            left: -60%;
+        }
+
+        100% {
+            left: 120%;
+        }
+    }
+
+    @keyframes textFadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(25px) scale(0.95);
+            text-shadow: none;
+        }
+
+        60% {
+            opacity: 1;
+            transform: translateY(-3px) scale(1.03);
+            text-shadow: 0 0 20px rgba(255, 100, 100, 0.5);
+        }
+
+        100% {
+            transform: translateY(0) scale(1);
+            text-shadow: 0 0 8px rgba(255, 100, 100, 0.2);
+            opacity: 1;
+        }
+    }
+
+    @keyframes textSlideUp {
+        0% {
+            opacity: 0;
+            transform: translateY(35px);
+            filter: blur(3px);
+        }
+
+        70% {
+            opacity: 1;
+            transform: translateY(-4px);
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* ========== DOTS ========== */
+    .dots {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 12px;
+        z-index: 10;
+    }
+
+    .dot {
+        width: 40px;
+        height: 4px;
+        background: rgb(255, 255, 255);
+        border-radius: 2px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .dot.active {
+        background: #E41937;
+        transform: scale(1.2);
+    }
+
+    /* ========== NAV BUTTONS ========== */
+    .nav-controls {
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+        display: flex;
+        gap: 20px;
+        z-index: 10;
+    }
+
+    .nav-btn {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .nav-btn:hover {
+        transform: scale(1.1);
+    }
+
+    .nav-btn img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        border-radius: 50%;
+    }
+
+    .nav-btn:hover img {
+        opacity: 1;
+    }
+
+    /* ========== PROGRESS BAR ========== */
+    .progress-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 5px;
+        background: #E41937;
+        width: 0%;
+        z-index: 9;
+    }
+
+    .progress-bar.animate {
+        animation: progress linear forwards;
+    }
+
+    @keyframes progress {
+        from {
+            width: 0%;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+        .caption-box {
+            padding: 15px 20px;
+        }
+
+        .caption-box h2 {
+            font-size: 1.7rem;
+        }
+
+        .caption-box h3 {
+            font-size: 1rem;
+        }
+
+        .nav-btn {
+            width: 45px;
+            height: 45px;
+            font-size: 1.2rem;
+        }
+
+        .dots {
+            bottom: 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .caption-box h2 {
+            font-size: 1.3rem;
+        }
+
+        .caption-box h3 {
+            font-size: 0.9rem;
+        }
+
+        .nav-btn {
+            width: 40px;
+            height: 40px;
+            font-size: 1rem;
+        }
+    }
