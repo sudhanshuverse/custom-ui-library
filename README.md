@@ -22,11 +22,14 @@ Each component is self-contained and easy to integrate into your projects.
 | 06 | [Infinite Card Scroll](https://sudhanshuverse.github.io/custom-ui-library/06-infinite-card-scroll/index.html) | A smooth horizontal card scrolling effect. |
 | 07 | [Scroll Text Animation](https://sudhanshuverse.github.io/custom-ui-library/07-scroll-text-animation/index.html) | Animate text while scrolling for engaging UI experiences. |
 | 08 | [Shiny CTA Button](https://sudhanshuverse.github.io/custom-ui-library/08-shiny-cta-button/index.html) | An eye-catching call-to-action button with a shiny effect. |
-| 09 | [Scroll Based Animation](https://sudhanshuverse.github.io/custom-ui-library/09-scroll-based-animation/index.html) | Scroll based animation |
-| 09 | [Image Slider](https://sudhanshuverse.github.io/custom-ui-library/10/slider/index.html) | Image Slider  |
-| 11 | [Glow Hover Card Effect](https://sudhanshuverse.github.io/custom-ui-library/11/glow-hover-card-effect) | Card glow on hover |
+| 09 | [Scroll Based Animation](https://sudhanshuverse.github.io/custom-ui-library/09-scroll-based-animation/index.html) | Scroll-based UI animation. |
+| 10 | [Image Slider](https://sudhanshuverse.github.io/custom-ui-library/10-slider/index.html) | A clean, responsive image slider. |
+| 11 | [Glow Hover Card Effect](https://sudhanshuverse.github.io/custom-ui-library/11-glow-hover-card-effect/index.html) | Card glow effect on hover. |
+| 12 | [Stars Falling (ThreeJS)](https://sudhanshuverse.github.io/custom-ui-library/12-stars-falling-using-threeJS/index.html) | Stars falling animation using ThreeJS. |
+| 13 | [Home Page Image Slider](https://sudhanshuverse.github.io/custom-ui-library/13-home-page-image-slider/index.html) | Hero-style home page slider. |
+| 14 | [Blackhole](https://sudhanshuverse.github.io/custom-ui-library/14-blackhole/index.html) | Blackhole-themed UI layout/effect. |
+| 15 | [Butterfly](https://sudhanshuverse.github.io/custom-ui-library/15-butterfly/index.html) | Butterfly animation effect. |
 
----
 
 ## 🚀 Getting Started
 
